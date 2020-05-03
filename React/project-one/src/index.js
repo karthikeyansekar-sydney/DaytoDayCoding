@@ -1,18 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var style = {
-  backgroundColor: 'green',
-  color: 'white',
-  fontFamily: 'Arial'
+// class Message extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//       <h1 style={{color: this.props.color}}>
+//       {this.props.msg}
+//       </h1>
+//       <p> I will be back in {this.props.minutes} minutes</p>
+//       </div>
+//     )
+//   }
+// }
+
+let cricScore = {
+  total: 260,
+  wicket: 8,
+  overs: 45,
+  target: 320
 }
 
-const title = React.createElement(
-  'h1',
-  {id:'title' , className: 'header', style: style},
-  'Hello world'
+class CricScoreCounter extends React.Component {
+  render() {
+return (
+  <section>
+  <div>
+<p> Total Score: {this.props.total} </p>
+  </div>
+  <div>
+<p> Wickets Taken: {this.props.wicket} </p>
+  </div>
+  <div>
+<p> Overs Bowled: {this.props.overs} </p>
+  </div>
+  <div>
+<p> Target Score: {this.props.target} </p>
+  </div>
+  </section>
 )
-
+  }
+}
 ReactDOM.render(
-  title, document.getElementById('root')
-)
+  // <Message msg="hello" color="green" minutes={4}/>, document.getElementById('root')
+<CricScoreCounter total={cricScore.total} wicket={cricScore.wicket} overs={cricScore.overs} target={cricScore.target}/>, document.getElementById('root'))
