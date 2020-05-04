@@ -60,6 +60,26 @@ const CricScoreCount = (props) => {
     </section>
   )
 }
+
+const Player = ({name,matches,rank}) => {
+  return (
+    <section>
+    <h2> {name} </h2>
+    <p> played {matches}* </p>
+    <p> ranking {rank}th in ODI </p>
+    </section>
+  )
+}
+
+const Stat = () => {
+  return(
+    <div>
+<Player name="Kallis" matches={323} rank={7}/>
+<Player name="Dravid" matches={303} rank={12}/>
+<Player name="sachin" matches={365} rank={4}/>
+<Player name="Taylor" matches={223} rank={5}/>
+</div>
+  )
+}
 ReactDOM.render(
-  // <Message msg="hello" color="green" minutes={4}/>, document.getElementById('root')
-<CricScoreCount total={cricScore.total} wicket={cricScore.wicket} overs={cricScore.overs} target={cricScore.target}/>, document.getElementById('root'))
+  <Stat/>,document.getElementById('root'))
