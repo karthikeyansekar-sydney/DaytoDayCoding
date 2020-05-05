@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Div} from './styled'
 
 class Message extends React.Component {
   render() {
@@ -14,6 +15,9 @@ class Message extends React.Component {
   }
 }
 
+
+//Demo for cricket counter components
+//Starts
 let cricScore = {
   total: 260,
   wicket: 8,
@@ -60,7 +64,10 @@ const CricScoreCount = (props) => {
     </section>
   )
 }
+//Ends
 
+//Demo for multiplt components usage
+//Starts
 const Player = ({name,matches,rank}) => {
   return (
     <section>
@@ -73,13 +80,15 @@ const Player = ({name,matches,rank}) => {
 
 const Stat = () => {
   return(
-    <div>
+    <Div>
 <Player name="Kallis" matches={323} rank={7}/>
 <Player name="Dravid" matches={303} rank={12}/>
 <Player name="sachin" matches={365} rank={4}/>
 <Player name="Taylor" matches={223} rank={5}/>
-</div>
+</Div>
   )
 }
+//Ends
+
 ReactDOM.render(
   <Stat/>,document.getElementById('root'))
