@@ -7,6 +7,44 @@ let bookList = [
   {"title": "White teeth", "author": "Zadie smith", "pages": 400},
   {"title": "cat's cradle", "author": "kyurt vonnegut", "pages": 320}
   ]
+
+class Library extends React.Component {
+
+// state = { open: false} //alternate to constructor
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      open: false
+    }
+    //this.toggleOpenClosed = this.toggleOpenClosed.bind(this); //used for normal functions not for arrow
+  }
+
+  toggleOpenClosed = () => {
+    this.setState(prevState => ({
+      open: !prevState.open
+    }))
+  }
+  render(){
+    const {books} = this.props;
+    return (
+      <div>
+      <h1>The library is {this.state.open ? 'open' : 'closed'}</h1>
+      <button onClick={this.toggleOpenClosed}>Change</button>
+      {books.map(
+        (book, i) =>
+        < Book
+        key ={i}
+        title = {book.title}
+        author = {book.author}
+        pages = {book.pages}
+      />
+      )}
+      </div>
+    )
+  }
+}
+
 const Book = ({title, author, pages}) => {
   return (
     <section>
@@ -17,10 +55,12 @@ const Book = ({title, author, pages}) => {
   )
 }
 
+//Function Component
+/*
 const Library = ({books}) => {
   return (
     <div>
-    {bookList.map(
+    {books.map(
       (book, i) =>
       < Book
       key ={i}
@@ -32,5 +72,6 @@ const Library = ({books}) => {
     </div>
   )
 }
+*/
 
-render(<Library />, document.getElementById('root'));
+render(<Library books={bookList}/>, document.getElementById('root'));
