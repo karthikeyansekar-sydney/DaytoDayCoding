@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Display } from './Children';
+import { Display } from './Display';
+import UnctrlComp from './UnctrlComp';
 
-const age = 18
+//const age = 18
 
 // const data = [
 //   {greeting: "Hello", id: 1},
@@ -12,8 +13,6 @@ const age = 18
 //   ]
 
 render(
-  <Display ifTruthy={age >= 18}>
-  <h1>you are major</h1>
-  </Display>,
+  <UnctrlComp/>,
   document.getElementById('root')
 );
