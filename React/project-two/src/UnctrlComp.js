@@ -9,7 +9,7 @@ handleSubmit = (e) => {
 
 render() {
   return (
-    <form onSubmit  = {this.handleSubmit}>
+    <form onSubmit  ={this.handleSubmit}>
     <label>
     Give a message to the world:
     <input type="text" ref={input => this.input = input}/>

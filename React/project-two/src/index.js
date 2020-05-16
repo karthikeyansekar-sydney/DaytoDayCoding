@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Display } from './Display';
-import UnctrlComp from './UnctrlComp';
+import CtrlComp from './UnctrlComp';
 
 //const age = 18
 
@@ -13,6 +12,6 @@ import UnctrlComp from './UnctrlComp';
 //   ]
 
 render(
-  <UnctrlComp/>,
+  <CtrlComp/>,
   document.getElementById('root')
 );
