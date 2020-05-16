@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import CtrlComp from './UnctrlComp';
-
+import {App} from './Fragments';
 //const age = 18
 
 // const data = [
@@ -12,6 +11,6 @@ import CtrlComp from './UnctrlComp';
 //   ]
 
 render(
-  <CtrlComp/>,
+  <App/>,
   document.getElementById('root')
 );
