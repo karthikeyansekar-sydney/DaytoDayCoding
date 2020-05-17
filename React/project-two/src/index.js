@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {App} from './Fragments';
+import {Apps} from './Keyedfragments';
 //const age = 18
 
 // const data = [
@@ -9,8 +9,12 @@ import {App} from './Fragments';
 //   {greeting: "are" ,id: 3},
 //   {greeting: "you", id: 4}
 //   ]
+const skidictionary = [
+{id: 1, name: "send", definition: "To throw one's body off of a cliff or rock"},
+{id: 2, name: "chowder", definition: "snow or powder that has been skied"}
+]
 
 render(
-  <App/>,
+  <Apps dictionary = {skidictionary}/>,
   document.getElementById('root')
 );
