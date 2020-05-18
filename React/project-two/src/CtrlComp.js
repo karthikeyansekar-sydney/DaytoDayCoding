@@ -32,4 +32,4 @@ render() {
 }
 }
 
-export default UnctrlComp
+export default CtrlComp
