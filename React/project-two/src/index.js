@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Resort  from './Resort';
+import Resorts  from './Resorts';
 //const age = 18
 
 // const data = [
@@ -15,6 +15,6 @@ import Resort  from './Resort';
 // ]
 
 render(
-  <Resort/>,
+  <Resorts/>,
   document.getElementById('root')
 );
