@@ -4,7 +4,7 @@ const inventory = {
     bags: 1344
 };
 
-const order = [['sunglasses', 2000], ['bags', 2]];
+const order = [['sunglasses', 1800], ['bags', 2]];
 
 const checkInventory = (order) => {
     return new Promise((resolve, reject) => {
@@ -23,4 +23,6 @@ const handleSuccess = (resolvedValue) => console.log("Your order is successful")
 
 const handleFailure = (rejectedValue) => console.log("Your order is not successful, try to reduce the number of items");
 
-checkInventory(order).then(handleSuccess, handleFailure);
+checkInventory(order)
+.then(handleSuccess)
+.catch(handleFailure);
