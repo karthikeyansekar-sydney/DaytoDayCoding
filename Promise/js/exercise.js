@@ -10,7 +10,8 @@ const myExecutor = (resolve, reject) => {  //promise constructor method takes a 
                                           //The executor function has two function parameters, usually
                                           //referred to as the resolve() and reject() functions
 
-                                          /*JavaScript will pass its own resolve() and reject() functions into the executor function. */
+                                          /*JavaScript will pass its own resolve() and reject() functions
+                                          into the executor function. */
     if (inventory.sunglasses > 0) {
         resolve('Sunglasses order processed.');
     } else {
