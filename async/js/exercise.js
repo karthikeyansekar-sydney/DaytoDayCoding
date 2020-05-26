@@ -31,7 +31,7 @@ withConstructor(0)
 async function withAsync(num){
   if (num === 0){
       return 'zero';
-    } else {
+    } else if (num === 90) {
       return 'not zero';
     }
 }
