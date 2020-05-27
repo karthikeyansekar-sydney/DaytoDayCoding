@@ -13,9 +13,9 @@ fivePromise()
 function withConstructor(num){
   return new Promise((resolve, reject) => {
     if (num === 0){
-      resolve('zero');
+      resolve ('zero');
     } else {
-      resolve('not zero');
+      resolve ('not zero');
     }
   })
 }
@@ -31,7 +31,7 @@ withConstructor(0)
 async function withAsync(num){
   if (num === 0){
       return 'zero';
-    } else if (num === 90) {
+    } else {
       return 'not zero';
     }
 }
