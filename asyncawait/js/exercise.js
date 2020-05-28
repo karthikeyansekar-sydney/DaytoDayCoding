@@ -1,4 +1,5 @@
 async function makeBeans() {
+
   let type = await shopForBeans();
   let isSoft = await soakTheBeans(type);
   let dinner = await cookTheBeans(isSoft);
