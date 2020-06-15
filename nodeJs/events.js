@@ -5,7 +5,15 @@ emitter.on("customEvent", (message, user) => {
     console.log(`${user}: ${message}`);
     });
 
-    emitter.emit("customEvent", "Hello World", "Computer");
-    emitter.emit("customEvent", "That's pretty cool huh?", "Karthik");
+    process.stdin.on("data", data =>{
+        const input = data.toString().trim();
+        if ( input === "exit") {
+            emitter.emit("customEvent", "Goodbye!", "process");
+            process.exit();
+        }
+        emitter.emit("customEvent", input, "terminal");
+    });
+    //emitter.emit("customEvent", "Hello World", "Computer");
+    //emitter.emit("customEvent", "That's pretty cool huh?", "Karthik");
     
 
