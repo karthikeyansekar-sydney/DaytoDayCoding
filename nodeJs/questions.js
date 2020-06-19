@@ -12,7 +12,7 @@ answerEvents.on("answer", answer =>
   console.log(`question answered: ${answer}`)
 );
 
-answerEvents.on("complete", answers => {
+answerEvents.on("complete", answers => { //Here the raised event is handled
   console.log("Thank you for your answers. ");
   console.log(answers);
 });

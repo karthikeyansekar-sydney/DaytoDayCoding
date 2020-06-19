@@ -12,7 +12,7 @@ module.exports = (questions, done = f => f) => {
   const emitter = new EventEmitter();
 
   const questionAnswered = answer => {
-    emitter.emit("answer", answer);
+    emitter.emit("answer", answer); //Here an event is raised
     answers.push(answer);
     if (answers.length < questions.length) {
       rl.question(questions[answers.length], questionAnswered);
